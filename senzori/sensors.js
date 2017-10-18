@@ -7,4 +7,3 @@ function ondeviceorientation(event)
 	document.getElementById("id_gamma").innerHTMLevent = event.gamma;
 
 }
-//--------------
