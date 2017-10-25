@@ -14,7 +14,7 @@ function ondevicemotion(event)
 {
 	document.getElementById("id_acc").innerHTML ="Acc" + Math.round(event.acceleration.x * 10) / 10 + " " + Math.round(event.acceleration.y * 10) / 10+ " " + Math.round(event.acceleration.z * 10) / 10;
 	var ag = event.accelerationIncludingGravity;
-	var x_incl = 	Math.atan(ag.x / ag.z) * 180 / Math.PI;
-	var y_incl = 	Math.atan(ag.y / ag.z) * 180 / Math.PI;
-	document.getElementById("id_acc_g").innerHTML =" AccG" + Math.round(ag.x * 10) / 10 + " " + Math.round(ag.y * 10) / 10+ " " + Math.round(ag.z * 10) / 10 + "incl_x = "+ x_incl + "incl_y = "+ y_incl;	
+	var gamma = 	Math.atan(ag.x / ag.z) * 180 / Math.PI;
+	var beta = 	Math.atan(ag.y / ag.z) * 180 / Math.PI;
+	document.getElementById("id_acc_g").innerHTML =" AccG" + Math.round(ag.x * 10) / 10 + " " + Math.round(ag.y * 10) / 10+ " " + Math.round(ag.z * 10) / 10 + "gamma = "+ gamma + "beta = "+ beta;	
 }
