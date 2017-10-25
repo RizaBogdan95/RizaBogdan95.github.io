@@ -16,5 +16,5 @@ function ondevicemotion(event)
 	var ag = event.accelerationIncludingGravity;
 	var gamma = 	Math.atan(ag.x / ag.z) * 180 / Math.PI;
 	var beta = 	Math.atan(ag.y / ag.z) * 180 / Math.PI;
-	document.getElementById("id_acc_g").innerHTML =" AccG" + Math.round(ag.x * 10) / 10 + " " + Math.round(ag.y * 10) / 10+ " " + Math.round(ag.z * 10) / 10 + "gamma = "+ gamma + "beta = "+ beta;	
+	document.getElementById("id_acc_g").innerHTML ="Acc_g = " + Math.round(ag.x * 10) / 10 + " " + Math.round(ag.y * 10) / 10 + " " + Math.round(ag.z * 10) / 10 + "Gamma = " + Math.round(gamma * 10) / 10 + " Beta = " + Math.round(beta * 10) / 10;		
 }
