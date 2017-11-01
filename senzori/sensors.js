@@ -61,6 +61,6 @@ function ondevicemotion(event)
 	
 	document.getElementById("id_acc_g").innerHTML ="Acc_g = " + Math.round(ag.x * 10) / 10 + " " + Math.round(ag.y * 10) / 10 + " " + Math.round(ag.z * 10) / 10 + "Gamma = " + Math.round(gamma * 10) / 10 + " Beta = " + Math.round(beta * 10) / 10;		
     deseneaza_cerc_canvas(gamma,beta);
-    deseneaza_cerc_svg(gamma,beta)
+    deseneaza_cerc_svg(gamma,beta);
 
 }
