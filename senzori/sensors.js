@@ -5,7 +5,7 @@ window.addEventListener('devicemotion',ondevicemotion);
 
 function deseneaza_cerc_svg(gamma,beta)
 {
-	var cerc = document.getElementById("id_svg");
+	var svg = document.getElementById("id_svg");
 	var w =  svg.getAttribute("width");
 	var h = svg.getAttribute("height");
 
