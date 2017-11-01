@@ -22,7 +22,7 @@ function deseneaza_cerc(gamma,beta)
 //gamma == 0 -> centru.x
 //gamma == -90 -> 0+raza
 //gamma == 90 -> w - raza  
-	context.arc(centru.x + gamma/ 90 * max_deplasare_x , centru.y + beta / 90 * max_deplasare_y,raza,0,2* Math.PI);
+	context.arc(centru.x - gamma/ 90 * max_deplasare_x , centru.y + beta / 90 * max_deplasare_y,raza,0,2* Math.PI);
 	context.stroke();	
 }
 function ondeviceorientation(event)
