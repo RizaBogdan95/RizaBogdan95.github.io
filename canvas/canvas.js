@@ -8,4 +8,5 @@ var w = canvas.getAttribute("width");
 var h = canvas.getAttribute("height");
 
 context.arc(w/2, h/2,10,0,2* Math.PI);
+context.strokeStyle="red";
 context.stroke();
