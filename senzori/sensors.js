@@ -49,14 +49,18 @@ function deseneaza_patrat_canvas(alpha,gamma,beta)
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas.getContext("2d");
 
-	context.beginPath();
+	context.resetTransform();
+	context.clearRect(0,0,w,h);
+	
+
+	
 	var w = canvas.getAttribute("width");
 	var h = canvas.getAttribute("height");
 
-	context.clearRect(0,0,w,h);
-	context.resetTransform();
 
-	var centru = {x : w / 2 , y : h / 2};
+	var centru_patrat = {x : centru.x  - gamma/ 90 * max_deplasare_x, y : centru.y + beta /90 *  max_deplasare_y);
+	context.translate(centru_patrat.x,centru_patrat.y);
+	context.rotate(alpha/180*Math.PI);
 	var latura  =10;
 	var max_deplasare_x= w/2 -x-latura/2;
 	var max_deplasare_y= h /2-latura/2;
@@ -65,7 +69,9 @@ function deseneaza_patrat_canvas(alpha,gamma,beta)
 //gamma == -90 -> 0+raza
 //gamma == 90 -> w - raza  
 	//context.arc(centru.x - gamma/ 90 * max_deplasare_x , centru.y + beta / 90 * max_deplasare_y,raza,0,2* Math.PI);
-	context.strokeRect(centru.x-latura/2,centru.y -latura/2, latura , latura )
+	
+	context.strokeRect(-latura/2,-latura/2, latura,latura  );
+	context.stroke();
 }	
 }
 function ondeviceorientation(event)
