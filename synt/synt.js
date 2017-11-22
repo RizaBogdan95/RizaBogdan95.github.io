@@ -8,9 +8,13 @@ function get_voices()
 {
 	var voices =synt.getVoices();
 	for (var i = 0; i < voices.length; i++) {
-	document.getElementById	("id_voices").innerHTML+= voices[i].name+":" + voices[i].lang + "<br>";
-	
+	document.getElementById	("id_voices")+= voices[i].name+":" + voices[i].lang + "<br>";
+	var s =document.createElement("option");
+	e.text=voices[i].lang;
+	document.getElementById("id_voices").add(e);
 
+
+}
 }
 function speak()
 {
