@@ -29,8 +29,8 @@ function on_touch_move(e)
 	for (var i = 0; i < touches.length; i++) 
 		if (touches[i].pageX < top_x + img_width && touches[i].pageX >= top_x &&
 			touches[i].pageY < top_y + img_width && touches[i].pageY >= top_y) (
-			var offset_inside_image_x = top_x - touches[i].pageX - rect_canvas.left;
-			var offset_inside_image_y = top_y - touches[i].pageY - rect_canvas.top;
+			var offset_inside_image_x =touches[i].pageX - rect_canvas.lefttop - top_x;
+			var offset_inside_image_y =touches[i].pageY - rect_canvas.toptop_y -top_y;
 			context.clearRect(0,0,400,300);
 				top_x = touches[i].pageX - rect_canvas.left-offset_inside_image_x;
 				top_y = touches[i].pageY - rect_canvas.top--offset_inside_image_y;
