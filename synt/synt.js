@@ -19,6 +19,7 @@ function speak()
 {
 	var enunt=new SpeechSynthesisUtterance();
 	enunt.text=document.getElementById("id_text").value;
+	enunt.text = document.getElementById("id_text").value;
 	synt.speak(enunt);
 }
 //---------------------
