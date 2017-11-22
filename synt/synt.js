@@ -4,7 +4,7 @@ var synt  = window.speechSynthesis;
 
 //---------------------------------------------------
 
-function get_voices();
+function get_voices()
 {
 	var voices =synt.getVoices();
 	for (var i = 0; i < voices.length; i++) {
