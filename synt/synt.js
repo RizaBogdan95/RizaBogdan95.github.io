@@ -14,7 +14,7 @@ function get_voices();
 }
 function speak()
 {
-	var enunt=new speechSynthesisUtterance();
+	var enunt=new SpeechSynthesisUtterance();
 	enunt.text=document.getElementById("id_text").value;
 	synt.speak(enunt);
 }
